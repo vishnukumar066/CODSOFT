@@ -1,0 +1,205 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: border-box;
+  font-family: "poppins",sans-serif;
+}
+
+body{
+  background-color: #1F7D53;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#ui-change-btn{
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  width: 85px;
+  height: 40px;
+  font-size: 1rem;
+  background: #93DA97;
+}
+#history-btn{
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 85px;
+  height: 40px;
+  font-size: 1rem;
+  background: #93DA97;
+}
+
+
+
+
+#history-dialog {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 20;
+  top: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.dialog-content {
+  background: #1F7D53;
+  margin: 10% auto;
+  padding: 10px;
+  border-radius: 15px;
+  width: 70%;
+  max-width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+
+}
+#history-list{
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.dialog-content h3{
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+  
+}
+
+#close-dialog {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+.container{
+  background-color: #255F38;
+  padding: 30px;
+  width: 90wh;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.6);
+}
+
+
+
+input{
+  margin-bottom: 60px;
+  padding: 10px;
+  background-color: #1F7D53;
+  border-radius: 10px;
+
+  font-size: 3rem;
+  width: 280px;
+  text-align: end;
+  
+  color: #000;
+}
+input::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+button{
+  height: 65px;
+  width: 65px;
+  font-size: 2rem;
+  font-weight: bolder;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.05);
+  transition:all 0.15s ease;
+}
+
+button:active {
+    box-shadow: inset 0 4px 6px rgba(0,0,0,0.8), inset 0 -2px 4px rgba(255,255,255,0.1);
+    transform: translateY(2px);
+}
+
+.keys{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+
+.numbers{
+  background-color: #255F38;
+}
+
+
+.symbols{
+  background-color: #1F7D53;
+}
+
+.symbol-equal{
+  background-color: #93DA97;
+}
+
+
+/* Dark Green Mode */
+.dark-mode {
+  background-color: #1F7D53;
+  color: black;
+}
+
+.dark-mode .container {
+  background-color: #255F38;
+  color: black;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background: #1F7D53;
+  color: #000;
+}
+
+.dark-mode .numbers {
+  background: #255F38;
+  color: black;
+}
+
+.dark-mode .symbols{
+  background: #1F7D53;
+}
+.dark-mode .symbol-equal{
+  background: #93DA97;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #fbf5df;
+  color: black;
+}
+
+.light-mode .container {
+  background-color: #f0f8ff;
+  color: black;
+}
+
+.light-mode input,
+.light-mode select {
+  background: #fdfdfd;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.light-mode .numbers {
+  background: #f0f8ff;
+  color: black;
+}
+.light-mode .symbols{
+  background: #ddd;
+}
+.light-mode .symbol-equal,
+.light-mode #ui-change-btn,
+.light-mode #history-btn{
+  background: #E1E9C9;
+}
